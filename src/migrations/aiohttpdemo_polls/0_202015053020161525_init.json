@@ -1,0 +1,5 @@
+{
+  "upgrade": [
+    "CREATE TABLE IF NOT EXISTS \"question\" (\n    \"id\" SERIAL NOT NULL PRIMARY KEY,\n    \"question_text\" VARCHAR(200) NOT NULL,\n    \"max_date\" DATE NOT NULL\n);\nCREATE TABLE IF NOT EXISTS \"choice\" (\n    \"id\" SERIAL NOT NULL PRIMARY KEY,\n    \"choice_text\" VARCHAR(200) NOT NULL,\n    \"votes\" INT NOT NULL,\n    \"question_id\" INT NOT NULL REFERENCES \"question\" (\"id\") ON DELETE CASCADE\n);\nCREATE TABLE IF NOT EXISTS \"aerich\" (\n    \"id\" SERIAL NOT NULL PRIMARY KEY,\n    \"version\" VARCHAR(50) NOT NULL,\n    \"app\" VARCHAR(20) NOT NULL\n);"
+  ]
+}

@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "giffapp"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aiohttp = {extras = ["speedups"], version = "^3.6.2"}
+cchardet = "^2.1.6"
+aiodns = "^2.0.0"
+pyyaml = "^5.3.1"
+tortoise-orm = "^0.16.12"
+asyncpg = "^0.20.1"
+aerich = "^0.1.9"
+aiopg = {extras = ["sa"], version = "^1.0.0"}
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.15.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
