@@ -7,7 +7,7 @@ from aiohttpdemo_polls.routes import setup_routes
 
 async def init_connection(_):
     await Tortoise.init(
-        db_url=settings.TORTOISE_ORM['connections']['default'],
+        db_url=settings.POSTGRES_URL,
         modules={'aiohttpdemo_polls': ['aiohttpdemo_polls.models']}
     )
 
