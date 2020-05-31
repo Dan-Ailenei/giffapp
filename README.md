@@ -38,3 +38,12 @@ subscription {
   }
 }
 ```
+
+# Resources:
+aiohttp: https://docs.aiohttp.org/en/stable/web.html
+
+tortoise-orm:  https://tortoise-orm.readthedocs.io/en/latest/reference.html
+
+aerich (migration tool for tortoise-orm): https://github.com/long2ice/aerich#quick-start
+
+tartiflette: https://tartiflette.io/docs/tutorial/getting-started
