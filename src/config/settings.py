@@ -1,3 +1,5 @@
+import os
+
 POSTGRES_USER = "postgres"
 POSTGRES_DATABASE = "postgres"
 POSTGRES_PASSWORD = "postgres"
@@ -13,3 +15,5 @@ TORTOISE_ORM = {
         },
     },
 }
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

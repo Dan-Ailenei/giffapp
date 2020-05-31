@@ -14,6 +14,7 @@ tortoise-orm = "^0.16.12"
 asyncpg = "^0.20.1"
 aerich = "^0.1.9"
 aiopg = {extras = ["sa"], version = "^1.0.0"}
+tartiflette-aiohttp = "^1.2.0"
 
 [tool.poetry.dev-dependencies]
 ipython = "^7.15.0"
