@@ -1,16 +1,23 @@
 import os
+import sys
 
-POSTGRES_USER = "postgres"
-POSTGRES_DATABASE = "postgres"
-POSTGRES_PASSWORD = "postgres"
+POSTGRES_USER = "giffapp"
+POSTGRES_PASSWORD = "giffapp"
+POSTGRES_DATABASE = "giffapp"
 POSTGRES_PORT = 5432
+
+if 'pytest' in sys.argv[0]:
+    POSTGRES_DATABASE = "test_giffapp"
+
 POSTGRES_URL = f"postgres://{POSTGRES_USER}:{POSTGRES_PASSWORD}@db.localhost:{POSTGRES_PORT}/{POSTGRES_DATABASE}"
+
+APP_LABEL = "aiohttpdemo_polls"
 
 TORTOISE_ORM = {
     "connections": {"default": POSTGRES_URL},
     "apps": {
-        "aiohttpdemo_polls": {
-            "models": ["aiohttpdemo_polls.models", "aerich.models"],
+        APP_LABEL: {
+            "models": [f"{APP_LABEL}.models", "aerich.models"],
             "default_connection": "default",
         },
     },
